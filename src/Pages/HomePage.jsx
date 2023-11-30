@@ -11,8 +11,8 @@ const HomePage = () => {
      <>
      <Carousel/>
      <Card/>
-     {/* <IncrementDecrement/>
-     <Effect/> */}
+     <IncrementDecrement/>
+     <Effect/>
      <DataFetch/>
      </>
   )

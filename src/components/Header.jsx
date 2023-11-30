@@ -24,7 +24,8 @@ const Header = () => {
 
      <div className="text-end">
        <Link to='login' type="button" className="btn btn-outline-light me-2">Login</Link>
-       <button type="button" className="btn btn-warning">Sign-up</button>
+       <Link to='signup' type="button" className="btn btn-warning me-2">Sign-up</Link>
+        
      </div>
    </div>
  </div>
