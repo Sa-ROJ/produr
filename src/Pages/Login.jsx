@@ -2,14 +2,14 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const Login = () => {
-  return (
-    <>
+    return (
+        <>
             <div className="cointainer-fluid">
                 <div className="row d-flex justify-content-center">
                     <div className="col-md-6 shadow py-3">
                     <main className="form-signin w-100 m-auto">
                 <form>
-                    <img className="mb-4" src="/image/img.jpg" alt="" width="300" height="75" />
+                    <img className="mb-4" src="/image/img.jpg" alt="" width="72" height="57" />
                     <h1 className="h3 mb-3 fw-normal">Please sign in</h1>
 
                     <div className="form-floating">
@@ -27,7 +27,11 @@ const Login = () => {
                             Remember me
                         </label>
                     </div>
-                    <Link to='/' className="btn btn-primary w-100 py-2" type="submit">Sign in</Link>
+                    <Link to='/' className="btn btn-primary w-100 py-2" type="submit">Login</Link>
+                    <p className="mt-5 mb-3 text-body-secondary">Don't have an account,</p>
+
+                    <Link to='/signup' className="btn btn-primary w-100 py-2" type="submit">Sign Up</Link>
+
                     <p className="mt-5 mb-3 text-body-secondary">&copy; 2017–2023</p>
                 </form>
             </main>
@@ -35,7 +39,7 @@ const Login = () => {
                 </div>
             </div>
         </>
-  )
+    )
 }
 
 export default Login
