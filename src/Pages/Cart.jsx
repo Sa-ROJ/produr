@@ -2,6 +2,7 @@ import React,{useState,useEffect} from 'react'
 
 import { Fragment } from 'react'
 import { FaTrash } from "react-icons/fa"
+import { toast,ToastContainer } from 'react-toastify'
 
 
 const Cart = () => {
@@ -23,13 +24,20 @@ const Cart = () => {
         localStorage.setItem('cartItems',JSON.stringify(updatedProduct))
 
     }
-    const deleteItem = (index) => {
-        const updatedProducts = products.filter((_, i) => i !== index);
+    const deleteItem = (index,name) => {
+        const confirm=window.confirm('Are you sure to delete the item from your cart?')
+        if(confirm){
+            const updatedProducts = products.filter((_, i) => i !== index);
         setProducts(updatedProducts);
         localStorage.setItem('cartItems',JSON.stringify(updatedProducts))
+            toast.success(`${name} is removed from the cart`)
+        }
+        
+        
   };
   return (
     <>
+    <ToastContainer/> 
     <div className="container">
         <div className="row d-flex justify-content-evenly my-4">
             {
@@ -59,7 +67,7 @@ const Cart = () => {
                                                     
                                                 </div>
                                                 <div className="col-2">
-                                                    <button className="btn btn-danger" onClick={()=>deleteItem(i)}><FaTrash/></button>
+                                                    <button className="btn btn-danger" onClick={()=>deleteItem(i,item.title)}><FaTrash/></button>
                                     </div>
                                 </div>
 
