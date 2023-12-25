@@ -5,6 +5,8 @@ import HomePage from './Pages/HomePage'
 import Login from './Pages/Login'
 import Signup from './Pages/Signup'
 import ProductDetails from './Pages/ProductDetails'
+import Products from './Pages/Products'
+import Cart from './Pages/Cart'
 
 const MyRoutes = () => {
   return (
@@ -13,11 +15,15 @@ const MyRoutes = () => {
             {/* <Route path='/' element={<Start/>}></Route> */}
           <Route path='' element={<Layout/>}>
             <Route index element={<HomePage/>}/>
-
+            <Route path="productsdetails/:product_id" element={<ProductDetails/>}/>
+            <Route path="products" element={<Products/>}/>
+            <Route path="cart" element={<Cart/>}/>
           </Route>
           <Route path='login' element={<Login/>}/>
           <Route path='signup' element={<Signup/>}/>
-          <Route path="productsdetails/:product_id" element={<ProductDetails/>}/>
+          
+
+      
           
 
         </Routes>

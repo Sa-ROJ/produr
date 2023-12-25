@@ -19,8 +19,8 @@ const Header = () => {
                 </Link>
               </li>
               <li>
-                <Link to="#" className="nav-link px-2 text-white">
-                  Features
+                <Link to="products" className="nav-link px-2 text-white">
+                  Products
                 </Link>
               </li>
               <li>
@@ -29,8 +29,8 @@ const Header = () => {
                 </Link>
               </li>
               <li>
-                <Link to="#" className="nav-link px-2 text-white">
-                  FAQs
+                <Link to="/cart" className="nav-link px-2 text-white">
+                  Cart
                 </Link>
               </li>
               <li>
